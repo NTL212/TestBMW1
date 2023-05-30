@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/main/java/vn/iotstar/Controller/LoginController.java=UTF-8
+encoding//src/main/java/vn/iotstar/Controller/RegistrationController.java=UTF-8
+encoding//src/main/java/vn/iotstar/Controller/admin/AdminLoginController.java=UTF-8
+encoding//src/main/java/vn/iotstar/Dao/Impl/AdminDaoImpl.java=UTF-8
+encoding//src/main/java/vn/iotstar/Dao/Impl/CategoryDaoImpl.java=UTF-8
+encoding//src/main/java/vn/iotstar/Dao/Impl/OrderItemDaoImpl.java=UTF-8
+encoding//src/main/java/vn/iotstar/Dao/Impl/OrderedDaoImpl.java=UTF-8
+encoding//src/main/java/vn/iotstar/Dao/Impl/ProductDaoImpl.java=UTF-8
+encoding//src/main/java/vn/iotstar/Dao/Impl/UserDaoImpl.java=UTF-8
+encoding//src/main/webapp/common/admin/header.jsp=UTF-8
+encoding//src/main/webapp/common/client/footer.jsp=UTF-8
+encoding//src/main/webapp/common/client/mainHeader.jsp=UTF-8
+encoding//src/main/webapp/common/client/menu.jsp=UTF-8
+encoding//src/main/webapp/view/client/index.jsp=UTF-8
