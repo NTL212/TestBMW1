@@ -1,6 +1,7 @@
 package vn.iotstar.Controller.admin;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,16 +31,22 @@ public class AdminLoginController extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html");
 
-		String username = StringEscapeUtils.escapeHtml4(request.getParameter("admin-username"));
-		String password = StringEscapeUtils.escapeHtml4(request.getParameter("admin-password"));
-		Admin admin = new Admin();
+		String username = request.getParameter("admin-username");
+		String password = request.getParameter("admin-password");
+		
+		String filteredUsername = StringEscapeUtils.escapeHtml4(username);
+		String encodedUsername = URLEncoder.encode(filteredUsername, "UTF-8");
+		
+		String filteredPassword = StringEscapeUtils.escapeHtml4(password);
+		String encodedPassword = URLEncoder.encode(filteredPassword, "UTF-8");
+		Admin admin = new Admin();		
 		admin.setName(request.getParameter("name"));
-		Admin admin_check = adminservice.checkAdminLogin(username, password);
+		Admin admin_check = adminservice.checkAdminLogin(encodedUsername, encodedPassword);
 		try {
 			if (admin_check != null) {
 				HttpSession session = request.getSession();
-				session.setAttribute("admin-username", username);
-				session.setAttribute("admin-password", password);
+				session.setAttribute("admin-username", encodedUsername);
+				session.setAttribute("admin-password", encodedPassword);
 				response.sendRedirect(request.getContextPath() + "/admin/homepage");
 			} else {
 				request.setAttribute("errorMessage", "Tài khoản hoặc mật khẩu không chính xác !!!");
