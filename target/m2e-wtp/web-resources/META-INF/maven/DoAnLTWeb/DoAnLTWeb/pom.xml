@@ -7,7 +7,7 @@
 	<properties>
 		<hibernate.version>5.6.0.Final</hibernate.version>
 		<hibernate.validator>5.4.3.Final</hibernate.validator>
-		<hibernate.entity>5.6.0.Final</hibernate.entity>
+		<hibernate.entity>5.6.15.Final</hibernate.entity>
 		<mssql.version>9.4.0.jre8</mssql.version>
 		<weld.servlet.version>2.4.8.Final</weld.servlet.version>
 		<sitemesh.version>2.4.2</sitemesh.version>
